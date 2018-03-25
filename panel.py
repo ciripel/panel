@@ -50,7 +50,19 @@ def hello():
     miner1 = data["rigs"]["018662"]["rack_loc"]
     miner_ip1 = data["rigs"]["018662"]["ip"]
     uptimesecs1 = data["rigs"]["018662"]["uptime"]
-    seq = (str(math.floor(int(uptimesecs1)/60/60/24)), "d ", str(math.floor((int(uptimesecs1) - math.floor(int(uptimesecs1)/60/60/24)*60*60*24)/60/60)), "h ", str(math.floor((int(uptimesecs1) - math.floor(int(uptimesecs1)/60/60)*60*60)/60)), "m ", str((int(uptimesecs1) - math.floor(int(uptimesecs1)/60)*60)), "s")
+    days = int(math.floor(int(uptimesecs1)/60/60/24))
+    hours = int(math.floor((int(uptimesecs1) - math.floor(int(uptimesecs1)/60/60/24)*60*60*24)/60/60))
+    minutes = int(math.floor((int(uptimesecs1) - math.floor(int(uptimesecs1)/60/60)*60*60)/60))
+    seconds = int((int(uptimesecs1) - math.floor(int(uptimesecs1)/60)*60))
+    if days == hours == minutes == 0:
+        seq = (str(seconds), "s")
+    elif days == hours == 0 != minutes:
+        seq = (str(minutes), "m ", str(seconds), "s")
+    elif days == 0 != hours:
+        seq = (str(hours), "h ", str(minutes), "m ", str(seconds), "s")
+    else:
+        seq = (str(days), "d ", str(hours), "h ", str(minutes), "m ", str(seconds), "s")
+
     uptime1 = ''.join(seq)
     total_hash1 = data["rigs"]["018662"]["hash"]
     gpu_hash1 = data["rigs"]["018662"]["miner_hashes"]
@@ -61,7 +73,19 @@ def hello():
     miner2 = data["rigs"]["018616"]["rack_loc"]
     miner_ip2 = data["rigs"]["018616"]["ip"]
     uptimesecs2 = data["rigs"]["018616"]["uptime"]
-    seq = (str(math.floor(int(uptimesecs2)/60/60/24)), "d ", str(math.floor((int(uptimesecs2) - math.floor(int(uptimesecs2)/60/60/24)*60*60*24)/60/60)), "h ", str(math.floor((int(uptimesecs2) - math.floor(int(uptimesecs2)/60/60)*60*60)/60)), "m ", str((int(uptimesecs2) - math.floor(int(uptimesecs2)/60)*60)), "s")
+    days = int(math.floor(int(uptimesecs2)/60/60/24))
+    hours = int(math.floor((int(uptimesecs2) - math.floor(int(uptimesecs2)/60/60/24)*60*60*24)/60/60))
+    minutes = int(math.floor((int(uptimesecs2) - math.floor(int(uptimesecs2)/60/60)*60*60)/60))
+    seconds = int((int(uptimesecs2) - math.floor(int(uptimesecs2)/60)*60))
+    if days == hours == minutes == 0:
+        seq = (str(seconds), "s")
+    elif days == hours == 0 != minutes:
+        seq = (str(minutes), "m ", str(seconds), "s")
+    elif days == 0 != hours:
+        seq = (str(hours), "h ", str(minutes), "m ", str(seconds), "s")
+    else:
+        seq = (str(days), "d ", str(hours), "h ", str(minutes), "m ", str(seconds), "s")
+
     uptime2 = ''.join(seq)
     total_hash2 = data["rigs"]["018616"]["hash"]
     gpu_hash2 = data["rigs"]["018616"]["miner_hashes"]
@@ -72,7 +96,19 @@ def hello():
     miner3 = data["rigs"]["66afbd"]["rack_loc"]
     miner_ip3 = data["rigs"]["66afbd"]["ip"]
     uptimesecs3 = data["rigs"]["66afbd"]["uptime"]
-    seq = (str(math.floor(int(uptimesecs3)/60/60/24)), "d ", str(math.floor((int(uptimesecs3) - math.floor(int(uptimesecs3)/60/60/24)*60*60*24)/60/60)), "h ", str(math.floor((int(uptimesecs3) - math.floor(int(uptimesecs3)/60/60)*60*60)/60)), "m ", str((int(uptimesecs3) - math.floor(int(uptimesecs3)/60)*60)), "s")
+    days = int(math.floor(int(uptimesecs3)/60/60/24))
+    hours = int(math.floor((int(uptimesecs3) - math.floor(int(uptimesecs3)/60/60/24)*60*60*24)/60/60))
+    minutes = int(math.floor((int(uptimesecs3) - math.floor(int(uptimesecs3)/60/60)*60*60)/60))
+    seconds = int((int(uptimesecs3) - math.floor(int(uptimesecs3)/60)*60))
+    if days == hours == minutes == 0:
+        seq = (str(seconds), "s")
+    elif days == hours == 0 != minutes:
+        seq = (str(minutes), "m ", str(seconds), "s")
+    elif days == 0 != hours:
+        seq = (str(hours), "h ", str(minutes), "m ", str(seconds), "s")
+    else:
+        seq = (str(days), "d ", str(hours), "h ", str(minutes), "m ", str(seconds), "s")
+
     uptime3 = ''.join(seq)
     total_hash3 = data["rigs"]["66afbd"]["hash"]
     gpu_hash3 = data["rigs"]["66afbd"]["miner_hashes"]
@@ -83,7 +119,19 @@ def hello():
     miner4 = data["rigs"]["f68192"]["rack_loc"]
     miner_ip4 = data["rigs"]["f68192"]["ip"]
     uptimesecs4 = data["rigs"]["f68192"]["uptime"]
-    seq = (str(math.floor(int(uptimesecs4)/60/60/24)), "d ", str(math.floor((int(uptimesecs4) - math.floor(int(uptimesecs4)/60/60/24)*60*60*24)/60/60)), "h ", str(math.floor((int(uptimesecs4) - math.floor(int(uptimesecs4)/60/60)*60*60)/60)), "m ", str((int(uptimesecs4) - math.floor(int(uptimesecs4)/60)*60)), "s")
+    days = int(math.floor(int(uptimesecs4)/60/60/24))
+    hours = int(math.floor((int(uptimesecs4) - math.floor(int(uptimesecs4)/60/60/24)*60*60*24)/60/60))
+    minutes = int(math.floor((int(uptimesecs4) - math.floor(int(uptimesecs4)/60/60)*60*60)/60))
+    seconds = int((int(uptimesecs4) - math.floor(int(uptimesecs4)/60)*60))
+    if days == hours == minutes == 0:
+        seq = (str(seconds), "s")
+    elif days == hours == 0 != minutes:
+        seq = (str(minutes), "m ", str(seconds), "s")
+    elif days == 0 != hours:
+        seq = (str(hours), "h ", str(minutes), "m ", str(seconds), "s")
+    else:
+        seq = (str(days), "d ", str(hours), "h ", str(minutes), "m ", str(seconds), "s")
+
     uptime4 = ''.join(seq)
     total_hash4 = data["rigs"]["f68192"]["hash"]
     gpu_hash4 = data["rigs"]["f68192"]["miner_hashes"]
@@ -94,7 +142,19 @@ def hello():
     miner5 = data["rigs"]["874d6d"]["rack_loc"]
     miner_ip5 = data["rigs"]["874d6d"]["ip"]
     uptimesecs5 = data["rigs"]["874d6d"]["uptime"]
-    seq = (str(math.floor(int(uptimesecs5)/60/60/24)), "d ", str(math.floor((int(uptimesecs5) - math.floor(int(uptimesecs5)/60/60/24)*60*60*24)/60/60)), "h ", str(math.floor((int(uptimesecs5) - math.floor(int(uptimesecs5)/60/60)*60*60)/60)), "m ", str((int(uptimesecs5) - math.floor(int(uptimesecs5)/60)*60)), "s")
+    days = int(math.floor(int(uptimesecs5)/60/60/24))
+    hours = int(math.floor((int(uptimesecs5) - math.floor(int(uptimesecs5)/60/60/24)*60*60*24)/60/60))
+    minutes = int(math.floor((int(uptimesecs5) - math.floor(int(uptimesecs5)/60/60)*60*60)/60))
+    seconds = int((int(uptimesecs5) - math.floor(int(uptimesecs5)/60)*60))
+    if days == hours == minutes == 0:
+        seq = (str(seconds), "s")
+    elif days == hours == 0 != minutes:
+        seq = (str(minutes), "m ", str(seconds), "s")
+    elif days == 0 != hours:
+        seq = (str(hours), "h ", str(minutes), "m ", str(seconds), "s")
+    else:
+        seq = (str(days), "d ", str(hours), "h ", str(minutes), "m ", str(seconds), "s")
+
     uptime5 = ''.join(seq)
     total_hash5 = data["rigs"]["874d6d"]["hash"]
     gpu_hash5 = data["rigs"]["874d6d"]["miner_hashes"]
