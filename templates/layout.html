@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Amitabha's Panel</title>
+    <link rel="icon" type="image/png" href="https://i.imgur.com/wYbaz8q.png" sizes="32x32"/>
+
+<!-- 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+//-->
+<style>
+div {
+    background: linear-gradient(to bottom left, #ff9933 15%, #ff0066 85%);
+} 
+body{
+    text-align: left;
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 4px;
+    height: 30px;
+}
+
+#customers tr:nth-child(even){background-color: #ff7733;}
+
+#customers tr:hover {background-color: #ff9933;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+}
+</style>
+ 
+</head>
+<body>
+ {% block body %}{% endblock %}
+</body>
+<!--
+ <script>
+$(document).ready(function() {
+    setInterval("ajaxd()", 60000); // call every 60 seconds
+});
+
+function ajaxd() { 
+
+  $("#sysTable").load("/mineri/");
+}
+</script>
+//-->
+</html>
