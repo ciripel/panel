@@ -160,6 +160,8 @@ def hello():
     gpu_hash5 = data["rigs"]["874d6d"]["miner_hashes"]
     temp5 = data["rigs"]["874d6d"]["temp"]
 
+
+    """
     response = get("http://aka.pool.sexy/api/accounts/0x04cfa4f946e2841b79d3e895e857f9ad3a951c04")
     data = response.json()
     curr_hash = data["currentHashrate"]
@@ -206,7 +208,7 @@ def hello():
     bal_gM = math.floor(float(balance_gM)*100)/100
     seq = (bal_cPS, bal_cM, bal_cMn, bal_bPS, bal_bM, bal_gPS, bal_gM)
     bal_total = math.floor(math.fsum(seq)*100)/100
-    
+
     items = [Item(miner1, miner_ip1, uptime1, total_hash1, gpu_hash1, temp1,
                   "", "Ciripel Pool Sexy", bal_cPS, "AKA"),
              Item(miner2, miner_ip2, uptime2, total_hash2, gpu_hash2, temp2,
@@ -227,6 +229,18 @@ def hello():
                   "Total", bal_total, "AKA"),
              Item("", "", "", "", "", "", "", "Rest pana la MN",
                   5000-bal_total, "AKA"),
+             Item("", "", "", "", "", "", "", "", "", ""), ]
+    """
+    items = [Item(miner1, miner_ip1, uptime1, total_hash1, gpu_hash1, temp1,
+                  "", "", "", ""),
+             Item(miner2, miner_ip2, uptime2, total_hash2, gpu_hash2, temp2,
+                  "", "", "", ""),
+             Item(miner3, miner_ip3, uptime3, total_hash3, gpu_hash3, temp3,
+                  "", "", "", ""),
+             Item(miner4, miner_ip4, uptime4, total_hash4, gpu_hash4, temp4,
+                  "", "", "", ""),
+             Item(miner5, miner_ip5, uptime5, total_hash5, gpu_hash5, temp5,
+                  "", "", "", ""),
              Item("", "", "", "", "", "", "", "", "", ""), ]
 
     table = ItemTable(items)
