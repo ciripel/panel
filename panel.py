@@ -137,6 +137,7 @@ def hello():
     gpu_hash4 = data["rigs"]["f68192"]["miner_hashes"]
     temp4 = data["rigs"]["f68192"]["temp"]
 
+    """
     response = get("http://rontg2.ethosdistro.com/?json=yes")
     data = response.json()
     miner5 = data["rigs"]["874d6d"]["rack_loc"]
@@ -159,7 +160,7 @@ def hello():
     total_hash5 = data["rigs"]["874d6d"]["hash"]
     gpu_hash5 = data["rigs"]["874d6d"]["miner_hashes"]
     temp5 = data["rigs"]["874d6d"]["temp"]
-
+    """
 
     """
     response = get("http://aka.pool.sexy/api/accounts/0x04cfa4f946e2841b79d3e895e857f9ad3a951c04")
@@ -239,13 +240,13 @@ def hello():
                   "", "", "", ""),
              Item(miner4, miner_ip4, uptime4, total_hash4, gpu_hash4, temp4,
                   "", "", "", ""),
-             Item(miner5, miner_ip5, uptime5, total_hash5, gpu_hash5, temp5,
+	     Item("", "", "", "", "", "",
                   "", "", "", ""),
-             Item("", "", "", "", "", "", "", "", "", ""), ]
+	     Item("", "", "", "", "", "", "", "", "", ""), ]
 
     table = ItemTable(items)
     return render_template("template.html", **locals())
 
-
 if __name__ == "__main__":
+    app.debug = True
     app.run(host='0.0.0.0', port=3331)
